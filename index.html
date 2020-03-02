@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="" xml:lang="ja" lang="ja">
-	<body>
-		  <input autocomplete="new-password" id="password" type="password" name="passwd" maxlength="32">
-		  <input type="button" value="copy" onclick="copyPw();" />
-	</body>
-	<script>
-		function copyPw(){
-			var pw = document.getElementById("password");
-			pw.type = "text";
-			pw.select();
-			try {
-				document.execCommand("copy");
-				alert("copied!")
-			} catch(e) {
-				alert("copy failed!")
-			}
-			pw.type = "password";
-		}
-	</script>
+  <body>
+    <input autocomplete="new-password" id="password" type="password" name="passwd" maxlength="32">
+    <input type="button" value="copy" onclick="copyPw();" />
+  </body>
+  <script>
+    function copyPw(){
+      var pw = document.getElementById("password");
+      pw.type = "text";
+      pw.select();
+      try {
+      	document.execCommand("copy");
+      	alert("copied!")
+      } catch(e) {
+      	alert("copy failed!")
+      }
+      pw.type = "password";
+    }
+  </script>
 </html>
