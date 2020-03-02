@@ -2,5 +2,20 @@
 <html xmlns="" xml:lang="ja" lang="ja">
 	<body>
 		  <input autocomplete="new-password" id="password" type="password" name="passwd" maxlength="16">
+		  <input type="button" value="copy"/>
 	</body>
+	<script>
+		function copyPw(){
+			var pw = document.getElementById("password");
+			pw.type = "text";
+			pw.select();
+			try {
+				document.execCommand("copy");
+				alert("copied!")
+			} catch(e) {
+				alert("copy failed!")
+			}
+			pw.type = "password";
+		}
+	</script>
 </html>
